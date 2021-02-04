@@ -17,6 +17,7 @@
     --primery-icons-color: #AFB1B8;
     --footer-social-bgc: rgba(255, 255, 255, 0.1);
     --transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    --color-text-work:  rgba(47, 48, 58, 0.8);
 }
 
 body {
@@ -237,6 +238,9 @@ img {
     line-height: 1.87;
     font-family: inherit;
     letter-spacing: 0.06em;
+    transition-property: background;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .hero-bt:focus,
 .hero-bt:hover {
@@ -286,7 +290,10 @@ img {
 }
 
 /* work */
-
+.work-list .work-item {
+    position: relative;
+    display: block;
+}
 .work-list {
  display: flex;
 }
@@ -295,6 +302,23 @@ img {
 }
 .title-work{
     margin-bottom: 50px;
+}
+.work-list .text_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+    min-height: 70px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.143;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+    background-color:var(--color-text-work);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
 }
 /* team */
 .team {
