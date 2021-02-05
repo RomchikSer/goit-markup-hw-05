@@ -37,6 +37,8 @@ ul {
 
 a {
     text-decoration: none;
+    margin: 0px;
+    padding: 0px;
 }
 button {
   font-family: inherit;
@@ -550,20 +552,22 @@ img {
 .footer .logo-studio {
     margin-bottom: 20px;
     display: inline-block;
+    margin-right: 0px;
     color: var(--secondary-text-color);
 
 }
 .address {
-    margin-right: 70px;
+    display: flex;
+    max-width: 231px;
     font-style: normal;
-    font-size: 14px;
-    line-height: 1.7;
+    flex-direction: column;
 
 }
 .map-link {
     color: var(--secondary-text-color);
-    margin: 0;
-    margin-bottom: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
 }
 .map-link:hover,
 .map-link:focus {
@@ -576,16 +580,24 @@ img {
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71; 
-    margin: 0;
-    margin-bottom: 9px;
+
 }
 
 .footer-contacts-link:hover,
 .footer-contacts-link:focus {
     color: var(--focus-text-color);
 }
-.footer-contacts .footer-contacts-link:not(:last-child) {
+.address .links:not(:last-child) {
     margin-bottom: 9px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+.footer-address {
+    margin-right: 70px;
+}
+.social-footer-container {
+    min-width: 206px;
 }
 .soc-fot-title {
     display: inline-block;
@@ -608,6 +620,7 @@ img {
     justify-content: center;
     align-items: center;
     background-color: var(--footer-social-bgc);
+    transition: var(--transition-bg);
 }
 .footer .container {
     display: flex;
